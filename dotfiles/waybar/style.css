@@ -1,0 +1,69 @@
+/* ===== Nord — Polar Night ===== */
+@define-color base    #2E3440;  /* fondo */
+@define-color surface #3B4252;  /* módulos */
+@define-color overlay #434C5E;
+@define-color muted   #4C566A;  /* bordes, inactivo */
+@define-color text    #D8DEE9;  /* texto */
+@define-color blue    #88C0D0;  /* azul acento */
+@define-color blue2   #81A1C1;
+@define-color blue3   #5E81AC;
+
+/* Reset general */
+* {
+    font-family: "Symbols Nerd Font", "MesloLGS Nerd Font";
+    font-size: 13px;
+    font-weight: bold;
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+}
+
+/* La barra en sí */
+window#waybar {
+    background: @base;
+    color: @text;
+}
+
+/* Espaciado general de cada módulo */
+#workspaces,
+#clock,
+#network,
+#bluetooth,
+#pulseaudio,
+#battery,
+#custom-power {
+    background: @surface;
+    padding: 2px 12px;
+    margin: 4px 3px;
+    border-radius: 8px;
+}
+
+/* Workspaces */
+#workspaces button {
+    color: @muted;
+    padding: 0 6px;
+}
+#workspaces button.active {
+    color: @blue;
+}
+
+/* Reloj centrado — con el azul acento */
+#clock {
+    color: @blue;
+}
+
+/* Cada módulo del sistema con su toque */
+#network     { color: @blue2; }
+#bluetooth   { color: @blue2; }
+#pulseaudio  { color: @text; }
+#battery     { color: @text; }
+
+/* Batería en estados de alerta */
+#battery.warning  { color: #EBCB8B; }  /* amarillo Nord, solo alerta */
+#battery.critical { color: #BF616A; }  /* rojo Nord, solo crítico */
+
+/* Botón de apagado — azul profundo, resalta */
+#custom-power {
+    color: @blue3;
+    padding: 2px 14px;
+}

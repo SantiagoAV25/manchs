@@ -1,0 +1,76 @@
+/* ===== Nord — Polar Night ===== */
+* {
+    base:     #2E3440;
+    surface:  #3B4252;
+    overlay:  #434C5E;
+    muted:    #4C566A;
+    text:     #D8DEE9;
+    blue:     #88C0D0;
+    blue3:    #5E81AC;
+
+    background-color: transparent;
+    text-color:       @text;
+    font:             "MesloLGS Nerd Font 12";
+}
+
+window {
+    background-color: @base;
+    border:           2px;
+    border-color:     @blue3;
+    border-radius:    12px;
+    width:            600px;
+    padding:          12px;
+}
+
+/* La barra de búsqueda de arriba */
+inputbar {
+    background-color: @surface;
+    border-radius:    8px;
+    padding:          10px 14px;
+    margin:           0 0 10px 0;
+    children:         [ prompt, entry ];
+}
+
+prompt {
+    text-color: @blue;
+    margin:     0 10px 0 0;
+}
+
+entry {
+    text-color:  @text;
+    placeholder: "Buscar...";
+    placeholder-color: @muted;
+}
+
+/* La lista de aplicaciones */
+listview {
+    lines:    8;
+    spacing:  4px;
+    scrollbar: false;
+}
+
+element {
+    padding:       8px 12px;
+    border-radius: 8px;
+    text-color:    @text;
+}
+
+/* La app seleccionada — resaltada en azul */
+element selected {
+    background-color: @blue3;
+    text-color:       #ECEFF4;
+}
+
+element-text {
+    background-color: transparent;
+    text-color:       inherit;
+}
+
+element-icon {
+    size:   24px;
+    margin: 0 10px 0 0;
+}
+configuration {
+    show-icons: true;
+    icon-theme: "Papirus";
+}
