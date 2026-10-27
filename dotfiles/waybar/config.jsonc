@@ -18,32 +18,32 @@
     },
 
     "network": {
-        "format-wifi": "  {signalStrength}%",
-        "format-ethernet": "  conectado",
-        "format-disconnected": "  sin red",
+        "format-wifi": "\uf1eb  {signalStrength}%",
+        "format-ethernet": "\uf0ac  conectado",
+        "format-disconnected": "\uf071  sin red",
         "tooltip-format": "{essid}",
         "on-click": "nm-connection-editor"
     },
 
     "bluetooth": {
-        "format": "  {status}",
+        "format": "\uf293  {status}",
         "format-disabled": "",
         "on-click": "blueman-manager"
     },
 
     "pulseaudio": {
         "format": "{icon}  {volume}%",
-        "format-muted": "  muteado",
+        "format-muted": "\uf026  muteado",
         "format-icons": {
-            "default": ["", "", ""]
+            "default": ["\uf026", "\uf027", "\uf028"]
         },
         "on-click": "pamixer -t"
     },
 
     "battery": {
         "format": "{icon}  {capacity}%",
-        "format-charging": "  {capacity}%",
-        "format-icons": ["", "", "", "", ""],
+        "format-charging": "\uf0e7  {capacity}%",
+        "format-icons": ["\uf244", "\uf243", "\uf242", "\uf241", "\uf240"],
         "states": {
             "warning": 30,
             "critical": 15
