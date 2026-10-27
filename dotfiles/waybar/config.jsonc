@@ -18,11 +18,12 @@
     },
 
     "network": {
-        "format-wifi": "\uf1eb  {signalStrength}%",
-        "format-ethernet": "\uf0ac  conectado",
+        "format-wifi": "\uf1eb  WiFi: {essid} {signalStrength}%",
+        "format-ethernet": "\uf796  Cable: {ifname}",
         "format-disconnected": "\uf071  sin red",
-        "tooltip-format": "{essid}",
-        "on-click": "nm-connection-editor"
+        "tooltip-format": "{essid}  {ipaddr}\n{bandwidthDownBytes} down / {bandwidthUpBytes} up",
+        "on-click": "~/manchs/scripts/wifi-menu.sh",
+        "on-click-right": "nm-connection-editor"
     },
 
     "bluetooth": {
